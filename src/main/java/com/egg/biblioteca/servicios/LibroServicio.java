@@ -93,6 +93,10 @@ public class LibroServicio {
         }
     }
 
+    public Libro getOne(Long isbn) {
+        return libroRepositorio.getOne(isbn);
+    }
+
     private void validar(Long isbn, String titulo, String idAutor, String idEditorial, Integer ejemplares) throws MiException {
 
         if (isbn == null) {
